@@ -1,0 +1,35 @@
+.button {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #2b5bb4b6,
+    #45accc
+  );
+
+  color: white;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  z-index: 1000;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-5px) scale(1.05);
+}

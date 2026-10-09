@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #070714;
+  color: #f8fafc;
+}
+
+main {
+  overflow: hidden;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+.section {
+  padding: 100px 9%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #8b5cf6;
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.2);
+}
+
+.card h3 {
+  color: #c4b5fd;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.about {
+  max-width: 950px;
+  margin: auto;
+}
+
+.about p {
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #05050d;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 70px 6%;
+  }
+
+  .section h2 {
+    font-size: 32px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   LIGHT THEME
+========================= */
+
+body.light-theme {
+  background: #f8fafc;
+  color: #111827;
+}
+
+body.light-theme .card {
+  background: white;
+  border-color: #e2e8f0;
+}
+
+body.light-theme section {
+  background: #f8fafc;
+}
+
+body.light-theme .section {
+  background: #f8fafc;
+}
+
+body.light-theme footer {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+body.light-theme p {
+  color: #475569;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

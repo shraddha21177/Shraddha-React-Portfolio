@@ -1,0 +1,28 @@
+.typing {
+  margin-top: 15px;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #a78bfa;
+
+  min-height: 35px;
+}
+
+.cursor {
+  margin-left: 3px;
+
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .typing {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,20 @@
+.section {
+  padding: 100px 9%;
+}
+
+.grid {
+  max-width: 900px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

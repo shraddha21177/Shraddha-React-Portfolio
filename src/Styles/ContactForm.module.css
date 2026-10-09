@@ -1,0 +1,108 @@
+.section {
+  padding: 100px 9%;
+  background: #09091a;
+}
+
+.form {
+  max-width: 850px;
+  margin: auto;
+
+  padding: 35px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(15px);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 15px;
+}
+
+.form select option {
+  background: #17172b;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 15px rgba(124, 58, 237, 0.2);
+}
+
+.form button {
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb
+  );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.form button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(124, 58, 237, 0.3);
+}
+
+@media (max-width: 650px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    padding: 22px;
+  }
+}

@@ -1,0 +1,91 @@
+.section {
+  padding: 100px 9%;
+  background: #09091a;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 42px;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid {
+  max-width: 1000px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+.card {
+  padding: 25px;
+
+  text-align: left;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 16px;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 15px 30px rgba(124, 58, 237, 0.15);
+}
+
+.card h3 {
+  color: #f8fafc;
+
+  margin-bottom: 15px;
+}
+
+.bar {
+  height: 8px;
+
+  background: #1e293b;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #38bdf8
+  );
+}
+
+.card p {
+  text-align: right;
+
+  color: #a78bfa;
+
+  font-size: 13px;
+
+  margin-top: 8px;
+}
+
+@media (max-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
